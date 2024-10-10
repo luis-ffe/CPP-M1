@@ -6,13 +6,13 @@
 /*   By: luis-ffe <luis-ffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:28:31 by luis-ffe          #+#    #+#             */
-/*   Updated: 2024/10/10 12:28:34 by luis-ffe         ###   ########.fr       */
+/*   Updated: 2024/10/10 13:10:07 by luis-ffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ClapTrap.hpp"
 
-ClapTrap::ClapTrap(): _AttackDamage(0), _EnergyPoints(10),  _HitPoints(10), _Name("Default Name") {
+ClapTrap::ClapTrap(): _AttackDamage(0), _EnergyPoints(10),  _HitPoints(10), _Name("NoName") {
     std::cout << "ClapTrap Default Contructor" << std::endl;
 }
 

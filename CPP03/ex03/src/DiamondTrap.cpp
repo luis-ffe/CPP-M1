@@ -6,14 +6,14 @@
 /*   By: luis-ffe <luis-ffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:29:46 by luis-ffe          #+#    #+#             */
-/*   Updated: 2024/10/10 12:29:49 by luis-ffe         ###   ########.fr       */
+/*   Updated: 2024/10/10 13:10:08 by luis-ffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(): ClapTrap() {
-	this->_Name = ClapTrap::_Name + "_clap_trap";
+DiamondTrap::DiamondTrap(): ClapTrap("Noname_clap_trap") {
+	this->_Name = "Noname";
 	this->_EnergyPoints = FragTrap::_EnergyPoints;
 	this->_HitPoints = ScavTrap::_HitPoints;
 	this->_AttackDamage = FragTrap::_AttackDamage;
@@ -27,9 +27,9 @@ DiamondTrap::DiamondTrap(const DiamondTrap &copy): ClapTrap(copy), ScavTrap(copy
 
 DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_trap") {
 	this->_Name = name;
-	this->_EnergyPoints = FragTrap::_EnergyPoints;
-	this->_HitPoints = ScavTrap::_HitPoints;
-	this->_AttackDamage = FragTrap::_AttackDamage;
+	ScavTrap::_EnergyPoints = 50;
+	ClapTrap::_HitPoints = 100;
+	FragTrap::_AttackDamage = 30;
 	std::cout << "DiamondTrap Constructor: " << this->_Name << std::endl;
 }
 
