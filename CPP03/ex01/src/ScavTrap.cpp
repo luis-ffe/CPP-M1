@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: luis-ffe <luis-ffe@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/10 12:35:56 by luis-ffe          #+#    #+#             */
+/*   Updated: 2024/10/10 12:38:31 by luis-ffe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../includes/ScavTrap.hpp"
 
@@ -39,21 +50,6 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &src)
 	this->_AttackDamage = src._AttackDamage;
 	return *this;
 }
-
-/*
-void	ScavTrap::attack(const std::string &target)
-{
-	if (this->_EnergyPoints > 0 && this->_HitPoints > 0)
-	{
-		std::cout << "ScavTrap " << this->_Name << " attacks " << target << ", causing " << this->_AttackDamage << " points of damage!" << std::endl;
-		this->_EnergyPoints--;
-	}
-	else if (this->_EnergyPoints == 0)
-		std::cout << "\033[31mScavTrap " << this->_Name << " is not able to attack " << target << ", because he has no energy points left.\033[0m" << std::endl;
-	else
-		std::cout << "\033[31mScavTrap " << this->_Name << " is not able to attack " << target << ", because he has not enough hit points.\033[0m" << std::endl;
-}
-*/
 
 void ScavTrap::attack(const std::string &target) {
     if (this->_HitPoints <= 0) {

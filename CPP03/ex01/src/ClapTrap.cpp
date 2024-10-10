@@ -1,11 +1,20 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: luis-ffe <luis-ffe@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/10 12:35:44 by luis-ffe          #+#    #+#             */
+/*   Updated: 2024/10/10 12:35:47 by luis-ffe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../includes/ClapTrap.hpp"
 
 ClapTrap::ClapTrap(): _AttackDamage(0), _EnergyPoints(10),  _HitPoints(10), _Name("Default Name") {
     std::cout << "Default Contructor" << std::endl;
 }
-
 
 ClapTrap::ClapTrap(std::string name): _AttackDamage(0), _EnergyPoints(10),  _HitPoints(10), _Name(name) {
     std::cout << "Contructor Set Name: " << name << std::endl;
