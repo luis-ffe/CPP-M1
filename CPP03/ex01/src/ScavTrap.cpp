@@ -6,14 +6,13 @@
 /*   By: luis-ffe <luis-ffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:35:56 by luis-ffe          #+#    #+#             */
-/*   Updated: 2024/10/10 12:38:31 by luis-ffe         ###   ########.fr       */
+/*   Updated: 2024/10/10 14:04:11 by luis-ffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ScavTrap.hpp"
 
-ScavTrap::ScavTrap(): ClapTrap()
-{
+ScavTrap::ScavTrap(): ClapTrap() {
 	this->_HitPoints = 100;
 	this->_EnergyPoints = 50;
 	this->_AttackDamage = 20;
@@ -21,14 +20,12 @@ ScavTrap::ScavTrap(): ClapTrap()
 	std::cout << "ScavTrap Default Constructor" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy)
-{
+ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy) {
 	this->_GuardingGate = copy._GuardingGate;
 	std::cout << "ScavTrap Copy Constructor" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name): ClapTrap(name)
-{
+ScavTrap::ScavTrap(std::string name): ClapTrap(name) {
 	this->_HitPoints = 100;
 	this->_EnergyPoints = 50;
 	this->_AttackDamage = 20;
@@ -36,13 +33,11 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 	std::cout << "ScavTrap Constructor NAME: " << this->_Name << std::endl;
 }
 
-ScavTrap::~ScavTrap()
-{
+ScavTrap::~ScavTrap() {
 	std::cout << "ScavTrap Deconstructed: " << this->_Name << std::endl;
 }
 
-ScavTrap &ScavTrap::operator=(const ScavTrap &src)
-{
+ScavTrap &ScavTrap::operator=(const ScavTrap &src) {
 	std::cout << "ScavTrap Assignment operator" << std::endl;
 	this->_Name = src._Name;
 	this->_HitPoints = src._HitPoints;
