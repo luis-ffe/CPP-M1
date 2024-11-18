@@ -80,10 +80,6 @@ This repository contains a series of projects designed to introduce the fundamen
 ## How to Run
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/mjorgecruz/42_cpp_00-04.git
-    cd 42_cpp_00-04
-    ```
 2. Each module contains its own set of projects and makefiles. Navigate to the desired module directory and compile the project:
     ```bash
     cd cpp00
